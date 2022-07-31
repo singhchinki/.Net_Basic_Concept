@@ -9,22 +9,44 @@ Console.WriteLine("Max Integer from array is: " + maxInteger.showMax());
 Console.WriteLine("Max Double from array is: " + maxDouble.showMax());
 Console.WriteLine("Max String from array is: " + maxString.showMax());
 
-DataStructureAndGenrics.StackProgram stackProgram = new DataStructureAndGenrics.StackProgram();
-stackProgram.Main(args);
+Console.WriteLine("1.stack\n2.Queue\n3.LinkedList\n4.HashTable\n5.Delegate\n6.BainaryTree");
+Console.WriteLine("Enter your Choice:");
+int choice = Convert.ToInt32(Console.ReadLine());
 
-DataStructureAndGenrics.Queues queues = new DataStructureAndGenrics.Queues();
-queues.Main();
+switch(choice)
+{
+    case 1:
 
-DataStructureAndGenrics.ProgramLinkedList programLinkedList = new DataStructureAndGenrics.ProgramLinkedList();
-programLinkedList.Main(args);
+    DataStructureAndGenrics.StackProgram stackProgram = new DataStructureAndGenrics.StackProgram();
+    stackProgram.Main(args);
+    break;
 
-DataStructureAndGenrics.HashTable hashTable = new DataStructureAndGenrics.HashTable();
-hashTable.Main();
+   case 2:
+          DataStructureAndGenrics.Queues queues = new DataStructureAndGenrics.Queues();
+          queues.Main();
+        break;
+    case 3:  
 
-DataStructureAndGenrics.Delegate testDelegate = new DataStructureAndGenrics.Delegate();
-testDelegate.Main(args);
+        DataStructureAndGenrics.ProgramLinkedList programLinkedList = new DataStructureAndGenrics.ProgramLinkedList();
+         programLinkedList.Main(args);
+        break;
+    case 4:
 
-DataStructureAndGenrics.BainaryTree bainaryTree = new DataStructureAndGenrics.BainaryTree();
-bainaryTree.Main(args);
+       DataStructureAndGenrics.HashTable hashTable = new DataStructureAndGenrics.HashTable();
+       hashTable.Main();
+        break ;
+    case 5:
 
+      DataStructureAndGenrics.Delegate testDelegate = new DataStructureAndGenrics.Delegate();
+      testDelegate.Main(args);
+        break;
+    case 6:
+
+        DataStructureAndGenrics.BainaryTree bainaryTree = new DataStructureAndGenrics.BainaryTree();
+         bainaryTree.Main(args);
+        break;
+    default:
+        Console.WriteLine("Enter Valid option");
+        break;
+}
 
